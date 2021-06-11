@@ -1,0 +1,192 @@
+.replacement {
+  background-color: $gray;
+  &__box {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    width: 90vw;
+    margin: 0 auto;
+    background-image: url('/images/bg-shorten-mobile.svg');
+    background-position: 100% 0%;
+    background-repeat: no-repeat;
+    background-color: $darkViolet;
+    border-radius: 0.75rem;
+    transform: translate(0, -50%);
+    max-width: 37.5rem;
+    &__input {
+      display: flex;
+      flex-direction: column;
+      input {
+        width: 90%;
+        margin: 0 auto;
+        height: 3rem;
+        font-size: 1.2rem;
+        padding: 1.5rem 1rem;
+        border-radius: 0.5rem;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        // max-width: 1400px;
+      }
+      .inputError {
+        border: 3px solid $red;
+      }
+      .errorMessage {
+        visibility: hidden;
+        width: 90%;
+        margin: 0 auto 1rem;
+        color: $red;
+      }
+      .errorMessage--active {
+        visibility: visible;
+        width: 90%;
+        margin: 0 auto 1rem;
+        color: $red;
+        font-style: italic;
+      }
+    }
+    button {
+      width: 90%;
+      margin: 0 auto;
+      border: none;
+      color: white;
+      background-color: $cyan;
+      display: inline-block;
+      padding: 0.85rem 3rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1.25rem;
+      transition: all 100ms ease-in;
+      &:hover {
+        background-color: rgb(151, 223, 223);
+      }
+    }
+  }
+  #responseField {
+    list-style: none;
+    width: 100%;
+    background-color: $gray;
+    // background-color: white;
+    // display: flex;
+    .short {
+      width: 90%;
+      max-width: 37.5rem;
+      background-color: white;
+      margin: 1.5rem auto;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      border-radius: 0.5rem;
+      transform: translate(0, -50%);
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:first-child {
+        margin-top: 2.5rem;
+      }
+
+      .user-link {
+        border-bottom: 1px solid rgba(128, 128, 128, 0.377);
+        font-weight: 500;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .short-link {
+        color: $cyan;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+      }
+      .copyButton {
+        width: 100%;
+        margin: 0 auto;
+        border: none;
+        color: white;
+        background-color: $cyan;
+        display: inline-block;
+        padding: 0.65rem 3rem;
+        border-radius: 0.5rem;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 1.25rem;
+        transition: all 100ms ease-in;
+        &:hover {
+          background-color: rgb(151, 223, 223);
+        }
+      }
+      .copied {
+        background-color: $darkViolet;
+      }
+    }
+  }
+  @include breakpoint-up(large) {
+    &__box {
+      max-width: 1400px;
+      width: 90%;
+      flex-direction: row;
+      padding: 2rem 2rem 0 2rem;
+      background-image: url('/images/bg-shorten-desktop.svg');
+      background-size: cover;
+      // margin-bottom: 1.5rem;
+      &__input {
+        width: 100%;
+        input {
+          width: 100%;
+          margin: auto auto auto 0;
+          height: 4rem;
+          padding: 1.5rem 2rem;
+        }
+        .errorMessage--active {
+          width: 100%;
+        }
+      }
+      button {
+        width: 25%;
+        height: 4rem;
+        margin: 0 0 auto 2rem;
+        min-width: 13.375rem;
+      }
+    }
+    #responseField {
+      .short {
+        max-width: 1400px;
+        margin: 1.5rem auto;
+        flex-direction: row;
+        align-items: center;
+        // justify-content: center;
+        // text-align: center;
+        padding: 1rem;
+
+        .user-link {
+          border: none;
+          margin: 0 auto 0 0;
+          margin-left: 0;
+          padding: 0;
+          width: 65%;
+          font-size: 1.2rem;
+          max-width: 56.875rem;
+        }
+        .short-link {
+          width: 20%;
+          margin: 0 1rem 0 3rem;
+          font-size: 1.2rem;
+          max-width: 17.5rem;
+        }
+        .copyButton {
+          width: 15%;
+          min-width: 10.8rem;
+          margin-right: 0;
+          max-width: 13.125rem;
+        }
+      }
+    }
+  }
+}

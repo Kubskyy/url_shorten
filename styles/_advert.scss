@@ -1,0 +1,38 @@
+.advert {
+  background-image: url('/images/bg-boost-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: $darkViolet;
+  width: 100vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h4 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  button {
+    border: none;
+    color: white;
+    background-color: $cyan;
+    display: inline-block;
+    padding: 0.9rem 3rem;
+    border-radius: 2rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.25rem;
+    transition: all 100ms ease-in;
+    &:hover {
+      background-color: rgb(151, 223, 223);
+    }
+  }
+  @include breakpoint-up(large) {
+    background-image: url('/images/bg-boost-desktop.svg');
+    background-size: cover;
+  }
+}

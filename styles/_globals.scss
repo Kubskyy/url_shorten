@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+button {
+  font-family: 'Poppins', sans-serif;
+}
+input {
+  font-family: 'Poppins', sans-serif;
+}
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}

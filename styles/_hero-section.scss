@@ -1,0 +1,90 @@
+.hero-section {
+  //   background-color: lightgreen;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+  margin-bottom: 12rem;
+  &__image {
+    // outline: 2px solid black;
+    background-image: url('/images/illustration-working.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: calc(100vw + 20%);
+    max-width: 700px;
+    height: 450px;
+    margin-left: 30%;
+    // background-color: lightgreen;
+    margin-bottom: 2rem;
+    // @include breakpoint-up(large) {
+    //   background-position: right;
+    //   margin-left: 10%;
+    // }
+  }
+  &__description {
+    padding: 0 2rem;
+    text-align: center;
+    // outline: 2px solid black;
+    width: 100%;
+    h1 {
+      font-size: 2.75rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: $veryDarkViolet;
+      margin-bottom: 1rem;
+      //   width: 30ch;
+    }
+    p {
+      font-size: 1.2rem;
+      color: $grayViolet;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+    button {
+      border: none;
+      color: white;
+      background-color: $cyan;
+      display: inline-block;
+      padding: 0.9rem 3rem;
+      border-radius: 2rem;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1.25rem;
+      transition: all 100ms ease-in;
+      &:hover {
+        background-color: rgb(151, 223, 223);
+      }
+    }
+  }
+  @include breakpoint-up(large) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    // padding: 0 3rem;
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto 9rem;
+    &__image {
+      background-position: center;
+      margin-left: 0rem;
+      // transform: translateX(20%);
+    }
+    &__description {
+      text-align: left;
+      padding: 0;
+      margin-right: 3rem;
+      min-width: 30rem;
+      max-width: 32.75rem;
+      h1 {
+        font-size: 4rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+  @include breakpoint-up(xlarge) {
+    padding: 0;
+  }
+}
